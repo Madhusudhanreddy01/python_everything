@@ -1,0 +1,41 @@
+What is asserequal in python
+
+assertEqual is a method provided by the Python testing framework called unittest. 
+It is used to compare the values of two objects and raise an AssertionError if they are not equal.
+
+The basic syntax of assertEqual is:
+
+sql
+
+unittest.assertEqual(first, second, msg=None)
+
+where first and second are the objects to be compared, and msg is an optional message to be printed if the assertion fails.
+
+For example, suppose you have a function add that adds two numbers:
+
+python
+
+def add(a, b):
+    return a + b
+
+You can test this function using assertEqual in a unit test:
+
+scss
+
+import unittest
+
+class TestAdd(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(0, 0), 0)
+        self.assertEqual(add(-1, 1), 0)
+
+In this example, the TestAdd class inherits from unittest.TestCase, which provides the assertEqual method. 
+The test_add method defines three test cases using assertEqual. 
+If any of the test cases fail (i.e., if the value returned by add is not equal to the expected value), an AssertionError is raised, and the test fails.
+
+assertEqual is just one of many assertion methods provided by the unittest module. 
+Other methods include assertTrue, assertFalse, assertIs, assertIsNot, assertIn, assertNotIn, and many others. 
+These methods allow you to write unit tests that verify the behavior of your code and ensure that it works correctly.
+
+

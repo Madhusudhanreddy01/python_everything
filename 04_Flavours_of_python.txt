@@ -1,0 +1,44 @@
+Flavors of Python
+Flavors of Python refer to the different types of Python compilers. 
+These flavors are useful to integrate various programming languages into Python. The following are some of them:
+
+CPython:
+This is the standard Python compiler implemented in C language. This is the Python software being downloaded and used by programmers directly from CPython . 
+In this, any Python program is internally converted into byte code using C language functions. This byte code is run on the interpreter available in Python Virtual Machine (PVM) created in C language. The advantage is that it is possible to execute C and C++ functions and programs in CPython.
+
+Jython:
+This is earlier known as JPython. This is the implementation of Python programming language which is designed to run on Java platform. 
+Jython compiler first compiles the Python program into Java byte code. This byte code is executed by Java Virtual Machine (JVM) to produce the output. Jython contains libraries which are useful for both Python and Java programmers. This can be downloaded from Jython .
+
+IronPython:
+This is another implementation of Python language for .NET framework. This is written in C# (C Sharp) language. 
+The Python program when compiled gives an intermediate language (IL) which runs on Common Language Runtime (CLR) to produce the output. 
+This flavor of Python gives flexibility of using both the .NET and Python libraries. IronPython can be downloaded from IronPython .
+
+PyPy:
+This is Python implementation using Python language. Actually, PyPy is written in a language called RPython which was created in Python language. 
+RPython is suitable for creating language interpreters. PyPy programs run very fast since there is a JIT (Just In Time) compiler added to the PVM. 
+PyPy can be downloaded by visiting the page: PyPy . Since the original Python uses only an interpreter in the Python Virtual Machine (PVM), the Python programs run slowly. 
+To improve the speed of execution, a compiler called JIT (Just In Time) is introduced into the PVM of PyPy. Hence, PyPy programs run faster than those of Python. We can download PyPy from PyPy .
+
+RubyPython:
+This is a bridge between the Ruby and Python interpreters. It encloses a Python interpreter inside Ruby applications. 
+This flavor of Python can be downloaded from RubyPython .
+
+StacklessPython:
+Small tasks which should run individually are called tasklets. Tasklets run independently on CPU and can communicate with others via channels. 
+A channel is a manager that takes care of scheduling the tasklets, controlling them and suspending them. A thread is a process which runs hundreds of such tasklets. We can create threads and tasklets in StacklessPython which is reimplementation of original Python language. This can be downloaded from StacklessPython .
+
+Pythonxy:
+This is pronounced as Python xy and written as Python(X,Y). This is the Python implementation that we get after adding scientific and engineering related packages. 
+We can download Pythonxy from Pythonxy .
+
+AnacondaPython:
+When Python is redeveloped for handling large-scale data processing, predictive analytics and scientific computing, it is called Anaconda Python. 
+This implementation mainly focuses on large scale of data. This can be downloaded from AnacondaPython.
+
+
+
+
+
+

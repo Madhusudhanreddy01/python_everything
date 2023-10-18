@@ -1,0 +1,14 @@
+Python Garbage Collection:
+A module represents Python code that performs a specific task. 
+Garbage collector is a module in Python that is useful to delete objects from memory which are not used in the program.
+
+The module that represents the garbage collector is named as gc. 
+Garbage collector in the simplest way to maintain a count for each object regarding how many times that object is referenced (or used).
+
+When an object is referenced twice, its reference count will be 2.
+
+When an object has some count, it is being used in the program and hence garbage collector will not remove it from memory.
+
+When an object is found with a reference count 0, garbage collector will understand that the object is not used by the program and hence it can be deleted from memory.
+
+Hence, the memory allocated for that object is deallocated or freed.

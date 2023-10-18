@@ -1,0 +1,2 @@
+13. Give a real time example for multithreading. Is it a good idea to use multi-thread to 
+speed your Python code? 

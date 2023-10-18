@@ -1,0 +1,50 @@
+call by value and call by reference in python
+
+In Python, when a function is called, the arguments that are passed to it can be passed either by value or by reference.
+
+Call by value:
+
+In call by value, a copy of the value of the argument is passed to the function. 
+This means that any changes made to the parameter inside the function do not affect the value of the 
+original argument outside of the function. In Python, all immutable data types like integers, floats, strings, and tuples are passed by value.
+
+Example of call by value:
+
+python
+
+def square(x):
+    x = x * x
+    return x
+
+num = 5
+print(square(num))  # Output: 25
+print(num)          # Output: 5
+
+In the above example, the value of num is passed to the square() function. 
+The parameter x is a local variable that holds a copy of the value of num. Any changes made to x inside 
+the function do not affect the original value of num outside the function.
+
+
+
+
+Call by reference:
+
+In call by reference, the function is given the memory address of the argument instead of a copy of the value. 
+This means that any changes made to the parameter inside the function affect the value of the original 
+argument outside of the function. In Python, all mutable data types like lists, dictionaries, and sets are passed by reference.
+
+Example of call by reference:
+
+python
+
+def append_to_list(lst, value):
+    lst.append(value)
+
+my_list = [1, 2, 3]
+append_to_list(my_list, 4)
+print(my_list)  # Output: [1, 2, 3, 4]
+
+In the above example, the function append_to_list() is passed a reference to the my_list object. 
+The append() method is called on the lst parameter, which modifies the original list object. 
+The changes made inside the function affect the value of the original list object outside the function.
+

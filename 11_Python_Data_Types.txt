@@ -1,0 +1,287 @@
+Python Data Types:
+A data type represents the type of data stored into a variable or memory. The data types which are already available in Python language are called built-in data types. 
+The data types which can be created by the programmers are called User-defined data types.
+
+
+The built-in data types are of five types:
+None Type
+Numeric Type
+Boolean Type
+Sequences
+Sets
+Mappings
+None Type
+In Python, the 'None' datatype represents an object that does not contain any value. In languages like Java, it is called 'null' object. 
+But in Python, it is called 'None' object.
+
+In a Python program, maximum of only one 'None' object is provided. One of the uses of 'None' is that it is used inside a function as a default value of the arguments. 
+When calling the function, if no value is passed, then the default value will be taken as 'None'. If some value is passed to the function, then that value is used by the function. In Boolean expressions, 'None' datatype represents 'False'.
+
+Numeric Type in Python
+The numeric types represent numbers. There are three sub types:
+
+int
+float
+complex
+int Datatype
+The int datatype represents an integer number. An integer number is a number without any decimal point or fraction part. For example, 200, -50, 0, 9888998700, etc. are treated as integer numbers. Now, let's store an integer number -57 into a variable 'a'.
+
+a = -57
+
+Here, 'a' is called int type variable since it is storing -57 which is an integer value. In Python, there is no limit for the size of an int datatype. It can store very large integer numbers conveniently.
+
+float Datatype
+The float datatype represents floating point numbers. A floating point number is a number that contains a decimal point. For example, 0.5, -3.4567, 290.08, 0.001 etc. are called floating point numbers. Let's store a float number into a variable 'num' as:
+
+num = 55.67998
+
+Here num is called float type variable since it is storing floating point value. Floating point numbers can also be written in scientific notation where we use 'e' or 'E' to represent the power of 10. Here 'e' or 'E' represents 'exponentiation'. For example, the number 2.5 multiplied with 104 is written as 2.5E4. Such numbers are also treated as floating point numbers.
+
+For example
+
+x = 22.55e3
+
+Complex Datatype
+A complex number is a number that is written in the form of a + bj or a + bJ. Here, 'a' represents the real part of the number and 'b' represents the imaginary part of the number. The suffix 'j' or 'J' after 'b' indicates the square root value of -1. The parts 'a' and 'b' may contain integers or floats.
+
+For example
+
+3+5j,
+
+Sponsored Content
+Helping industries become globally competitive
+Helping industries become globally competitive
+Mitsubishi Electric
+Unsold Laptops Are Being Sold for Almost Nothing (Take a Look at the Prices)
+Unsold Laptops Are Being Sold for Almost Nothing (Take a Look at the Prices)
+Unsold Laptops | Search ads
+Telangana: Reduce Fat With Laser Liposuction (See Total Prices)
+Telangana: Reduce Fat With Laser Liposuction (See Total Prices)
+Liposuction | Search Ads
+Hyderabad - Stair Lifts Could Be a Dream Come True for Seniors
+Hyderabad - Stair Lifts Could Be a Dream Come True for Seniors
+Stair Lift | Search Ads
+Improve Poor Sight! Do This immediately!
+Improve Poor Sight! Do This immediately!
+visionntie.com
+5-year unlimited mileage for your Audi.
+5-year unlimited mileage for your Audi.
+Audi India.
+-1-5.5J,
+
+0.2+10.5J
+
+Above all are complex numbers
+
+See the following statement:
+
+c1 = -1-5.5J
+
+Representing Binary, Octal and Hexadecimal Numbers
+A binary number should be written by prefixing 0b (zero and b) or 0B (zero and B) before the value.
+
+For example, 0b110110, 0B101010011 are treated as binary numbers.
+
+Hexadecimal numbers are written by prefixing 0x (zero and x) or 0X (zero and big X) before the value, as 0xA180 or 0X11fb91 etc.
+
+Similarly, octal numbers are indicated by prefixing 0o (zero and small o) or 0O (zero and then O) before the actual value. For example, 0O145 or 0o773 are octal values.
+
+bool Datatype
+The bool datatype in Python represents boolean values. There are only two boolean values True or False that can be represented by this datatype. Python internally represents True as 1 and False as 0. A blank string like "" is also represented as False. Conditions will be evaluated internally to either True or False.
+
+Sequences in Python
+
+Generally, a sequence represents a group of elements or items. For example, a group of integer numbers will form a sequence. There are six types of sequences in Python:
+
+str
+bytes
+bytearray
+list
+tuple
+range
+str Datatype
+In Python, str represents string datatype. A string is represented by group of characters. Strings are enclosed in single quotes or double quotes. Both are valid.
+
+str=  "Digi Brains Academy"
+str=  'Digi Brains Academy'
+we can also write strings inside """ (triple double quotes) or '''(triple single quotes) to span a group of lines including spaces.
+
+str1="""Welcome to the world of Programming."""
+str2='''Welcome to the world of Programming.'''
+
+Slicing of Strings
+slice means a piece [ ] operator is called slice operator, which can be used to retrieve parts of String.
+
+
+In Python Strings follows zero based index
+
+The index can be either +ve or -ve.
+
++ve index means forward direction from Left to Right
+
+-ve index means backward direction from Right to Left
+
+String Slicing Example
+s='Welcome to Python Programming'
+print(s)
+print(s[0]) # display 0th character from s
+print(s[3:7]) # display from 3rd to 6th(n-1) characters
+print(s[11:]) #display from 11th characters onwards till end
+print(s[-1]) #display first character from the end
+print(s*2)
+output:
+
+Welcome to Python Programming
+W
+come
+Python Programming
+g
+welcome to Python Programmingwelcome to Python Programming
+The repetition operator is denoted by '*' symbol and useful to repeat the string for several times. For example, s*n repeats the string s for n times.
+
+bytes Data Type
+The bytes data type represents a group of byte numbers just like an array does. A byte number is any positive integer from 0 to 255.
+
+ele=[13,15,0,23,54]  #this is a list of byte numbers
+x=bytes(ele)  #convert the list into bytes array
+print(x[0])  #display 0th element i.e., 13
+We cannot modify or edit any element in the bytes type array. For example, x[0]=55 gives an error. here we are trying to replace 0th element by 55 which is not allowed.
+
+for i in x: 
+print(i) #to display the numbers 
+bytearray Data Type
+The bytearray data type is similar to bytes data type. The difference is that array type can be the bytes type array cannot be modified but the bytearray type array can be modified type. It means any element or all the elements of the bytearray type can be modified.
+
+ele=[13,15,0,23,54]  #this is a list of byte numbers
+x=bytearray(ele)  #convert the list into bytearray type
+print(x[0])  #display 0th element i.e., 13
+we can modify or edit the elements of the bytearray
+
+x[0]=74  #replace 0th element by 74
+x[1]=22  #replace 1st element by 22
+list Data Type
+Lists in python are similar to arrays in C or Java. A list represents a group of elements. The main difference between a list and an array is that a list can store different types of elements but an array can store only one type of elements. Lists are represented using square brackets [ ] and the elements are written in [ ], separated by commas.
+
+Example:
+
+x = [10, -45, 23.74, 'Naveen', 'Anantapur']
+
+will create a list with different types of elements.
+
+The slicing operation like [0:3] represents elements from 0th to 2nd positions.
+
+tuple Data Type
+A tuple is similar to a list. A tuple contains a group of elements which can be of different types. The elements in the tuple are separated by commas and enclosed in parentheses( ). Whereas the list elements can be modified, it is not possible to modify tuple elements. That means a tuple can be treated as a read-only list.
+
+tpl = (21, -55, 75.74, 'Digi', 'Brains')
+
+The individual elements of the tuple can be referenced using square braces as tpl[0], tpl[1], tpl[2],...
+
+If we try to modify 0th element as:
+
+tpl[0]=29
+
+This will result in error. The slicing operations which can be done on lists are also valid in tuples.
+
+range Data Type
+The range data type represents a sequence of numbers. The numbers in the range are not modifiable. generally, range is used for repeating a for loop for a specific number of times. To create a range of numbers, we can simply write:
+
+r=range(10)
+
+Here, the range object is created with the numbers starting from 0 to 9. We can use a starting number, an ending number, and a step value in the range object as:
+
+
+r = range(30,40,2)
+
+This will create a range object with a starting number 30 and an ending number 39. The step size is 2. It means the numbers in the range will increase by 2 every time. So, the for loop
+
+for i in r: print(i)
+
+will display numbers: 30,32,34,36,38.
+
+The above statement will display numbers from 0 to 9. We can display these numbers using a for loop as:
+
+for i in r: print(i)
+lst=list(range(10))			
+print(lst)
+output
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+lst=list(range(10,20,3))
+print(lst)
+output
+
+[10, 13, 16, 19]
+Sets
+A set is an unordered collection of elements just like a set in Mathematics. The order of elements is not maintained in the sets. It means the elements may not appear in the same order as they are entered into the set. Moreover, a set does not accept duplicate elements
+
+
+There are two sub types in sets:
+
+set datatype
+frozenset datatype
+set Data Type
+To create a set, we should enter the elements separated by commas inside curly braces{ }.
+
+s = {10,20,30,20,50}
+print(s) #may display{50,10,20,30}
+If we observe that set 's' is not maintaing the order of the elements. Also we have repeated the element 20 in the set, but it has stored only one 20. We can use the set( ) function to create a set as:
+
+c=set("Hello")
+print(c) #may display {'o', 'H', 'l', 'e'}
+We can convert a list into a set using the set() function as:
+
+lst = [1,2,5,4,3]
+s=set(lst)
+print(s)  #may display {1,2,3,4,5}
+Since sets are unordered, we cannot retrieve the elements using indexing or slicing operations
+
+print(s[0]) # display error
+print(s[0:2]) # display error
+The update( )method is used to add elements to a set as:
+
+s.update([50,60])
+print(s) #may display {1,2,3,4,5,50,60}
+On the other hand, the remove( )method is used to remove any particular element from a set as:
+
+s.remove(50)
+print(s)  #may display { 1,2,3,4,5,60}
+frozenset Data Type
+The frozenset data type is same as the set data type. The main difference is that the elements in the set data type can be modified; whereas, the elements of frozenset cannot be modified. We can create a frozenset by passing a set to frozenset( ) function as:
+
+s = {50,60,70,80,90}
+print(s)
+fs=frozenset(s)  #create frozenset fs
+print(fs)  #may display frozenset({80,90,50,60,70})
+Another way of creating a frozenset is by passing a string(a group of characters) to the frozenset( ) function as:
+
+
+fs=frozenset("abcdefg")
+print(fs)
+However, update() and remove() methods will not work on frozensetssince they cannot be modified or updated.
+
+Mapping Types
+A map represents a group of elements in the form of key value pairs so that when the key is given, we can retrieve the value associated with it. The dict data type is an example for a map. The 'dict' represents a dictionary that contains pairs of elements such that the first element represents the key and the next one becomes its value. The key and its value should be separated by a colon(:) and every pair should be separated by comma. All the elements should be enclosed inside curly brackets { }.
+
+We can create a dictionary by typing the roll numbers and names of students. Here, roll numbers are keys and names will become values. We write these key value pairs inside curly braces as:
+
+d={1001: 'Anil', 1002: 'Balu', 1003: 'Chakri', 1004: 'Kalyan'}
+
+d={1001: 'Anil', 1002: 'Balu', 1003: 'Chakri', 1004: 'Kalyan'}
+print(d[1001])
+print(d.keys())
+print(d.values())
+d[1001]='Ajay'
+print(d)
+del d[1003]
+print(d)
+d={1001: 'Anil', 1002: 'Balu', 1003: 'Chakri', 1004: 'Kalyan'}
+d.items()
+Output
+
+Anil
+dict_keys([1001, 1002, 1003, 1004])
+dict_values(['Anil', 'Balu', 'Chakravarthy', 'Kalyan'])
+d={1001: 'Ajay', 1002: 'Balu', 1003: 'Chakri', 1004: 'Kalyan'}
+{1001: 'Anil', 1002: 'Balu', 1004: 'Kalyan'}
+dict_items([(1001, 'Anil'), (1002, 'Balu'), (1003, 'Chakri'), (1004, 'Kalyan')])

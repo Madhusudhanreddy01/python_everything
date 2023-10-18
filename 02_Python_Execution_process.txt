@@ -1,0 +1,22 @@
+Python Execution Process:
+Let's assume that we write a Python program with the name x.py. Here, x is the program name and the .py is the extension name. 
+Every Python program is typed with an extension name .py. After typing the program, the next step is to compile the program using Python compiler. 
+The compiler converts the Python program into another code called byte code.
+
+Byte code represents a fixed set of instructions that represents all operations like arithmetic operations, comparison operations, memory related operations, etc., which run on any operating system and hardware. 
+It means the byte instructions are system independent or platform independent. The size of each byte code instruction is 1 byte and hence they are called with the name byte code. 
+These byte code instructions are contained in the file x.pyc. Here, the x.pyc file represents a python compiled file.
+
+The next step is to run the program. If we directly give the byte code to the computer, it cannot execute them. 
+Any computer can execute only binary code which comprises 1s and 0s. Since the binary code is understandable to the machine (computer), it is also called machine code. 
+It is therefore necessary to convert the byte code into machine code so that our computer can understand and execute it. For this purpose, we should use PVM (Python Virtual Machine).
+
+PVM uses an interpreter which understands the byte code and converts it into machine code. 
+PVM first understands the processor and operating system in our computer. 
+Then it converts the byte code into machine code understandable to that processor and into that format understandable to that operating system. 
+These machine code instructions are then executed by the processor and results are displayed.
+
+Python Execution Process:--------|
+                                \|/
+
+https://www.gkindex.com/python-tutorial/images/python-virtual-machine.jpg?ezimgfmt=rs:736x137/rscb1/ng:webp/ngcb1

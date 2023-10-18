@@ -1,0 +1,32 @@
+value from 1 to another function in python
+
+To pass a value from one function to another function in Python, you can do the following:
+
+    Define the first function and the value you want to pass as a parameter:
+
+python
+
+def function1(value):
+    # code for function1
+
+    Within the first function, call the second function and pass the value as an argument:
+
+python
+
+def function1(value):
+    function2(value)
+
+    Define the second function and include the value as a parameter:
+
+python
+
+def function2(value):
+    # code for function2 using the value parameter
+
+    When you call the first function, pass the value you want to use as an argument:
+
+python
+
+function1(42)
+
+In the example above, we are passing the value 42 from function1 to function2. You can replace 42 with any value you want to pass.

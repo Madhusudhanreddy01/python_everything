@@ -1,0 +1,1 @@
+'''21. How do you open a file of large size, say around 10GB? So that program should not crash'''

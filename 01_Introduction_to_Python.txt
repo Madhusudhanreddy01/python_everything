@@ -1,0 +1,57 @@
+What is Python:
+Python is a high-level, object-oriented computer programming language created by Guido van Rossum while working at National Research Institute at Netherlands and first released in 1991.
+
+Python was picked the name Python for the new language from the TV show Monty Python's Flying Circus which was broadcasted in BBC from 1969 to 1974.
+
+Python is recommended as first programming language for beginners.
+
+Python is a programming language that combines the features of C and Java. It offers elegant style of developing programs like C. 
+When the programmers want to go for object orientation, Python offers classes and objects like Java.
+
+
+Python Installation
+https://www.python.org is the official website for python. Download python from Python Org . Based on operating system you use.
+
+Python Use Cases:
+The most common important application areas are
+For developing Desktop Applications
+For developing web Applications
+For developing database Applications
+For Network Programming
+Testing
+For developing games
+For Data Analysis Applications
+For Machine Learning
+For developing Artificial Intelligence Applications
+For IoT
+
+The biggest strength of Python is large library which can be used for the following:
+Machine Learning
+GUI Applications
+Web frameworks like Django (used by YouTube)
+Multimedia
+Image processing
+Test frameworks
+Web scraping
+Scientific computing
+Text processing and even more
+
+Companies Which Use Python:
+Internally Google and Youtube use Python coding
+Netflix is developed by using Python
+NASA and New York Stock Exchange Applications developed by Python
+Top Software companies like Google, Microsoft, IBM, Yahoo using Python
+
+Advantages of Python Compare to Other Languages:
+Simple
+Easy to Learn
+Open Source
+High Level Language
+Dynamically Typed
+Platform Independent
+Portable
+Procedure and Object Oriented
+Interpreted
+Extensible (Ex:- Jython for java integration, Iron Python for .Net)
+Huge Library
+Database Connectivity

@@ -1,0 +1,29 @@
+Memory Management in Python:
+In C or C++, the programmer should allocate and deallocate (or free) memory dynamically, during runtime. 
+For example, to allocate memory, the programmer may use malloc() function and to deallocate the memory, he may use the free() function. 
+But inPython, memory allocation and deallocation are done during runtime automatically. 
+The programmer need not allocate memory while creating objects or deallocate memory when deleting the objects. 
+Python's PVM will take care of such issues.
+
+Everything is considered as an object in Python. For example, strings are objects. Lists are objects. Functions are objects. 
+Even modules are also objects. For every object, memory should be allocated. 
+Memory manager inside the PVM allocates memory required for objects created in a Python program. 
+All these objects are stored on a separate memory called heap. Heap is the memory which is allocated during runtime. 
+The size of the heap memory depends on the Random Access Memory (RAM) of our computer and it can increase or decrease its size depending on the requirement of the program.
+
+
+
+Following Figure shows the allocation of memory by Python's Virtual Machine:
+https://www.gkindex.com/python-tutorial/images/MMPython.jpg?ezimgfmt=rs:587x518/rscb1/ngcb1/notWebP
+
+
+
+
+Memory Management in Python
+We know that the actual memory (RAM) for any program is allocated by the underlying Operating system. 
+On the top of the Operating system, a raw memory allocator oversees whether enough memory is available to it for storing objects. 
+On the top of the raw memory allocator, there are several object-specific allocators operate on the same heap. 
+These memory allocators will implement different types of memory management policies depending on the type of the objects. 
+For example, an integer number should be stored in memory in one way and a string should be stored in a different way. 
+Similarly, when we deal with tuples and dictionaries, they should be stored differently. 
+These issues are taken care of by object-specific memory allocators.

@@ -1,0 +1,82 @@
+Python Program Execution And Comments:
+Python Program can be executed in a three ways, lets write a sample program to find sum of two numbers Python and explore the execution process steps involved.
+
+a = 10
+b = 20
+print("The Sum : ",(a+b))						
+						
+By observing the code of same program in different programming language we can easily decide that Python code will be simple and concise.
+
+Execution of Python Program :
+https://www.gkindex.com/python-tutorial/images/python-virtual-machine.jpg?ezimgfmt=rs:736x137/rscb1/ngcb1/notWebP
+
+Python Program Execution And Comments
+
+Lets Compare Java and C Program Executions :
+Execution of C Program:
+https://www.gkindex.com/python-tutorial/images/C-Program.jpg?ezimgfmt=rs:648x132/rscb1/ng:webp/ngcb1
+
+Python Program Execution And Comments
+Execution of Java Program:
+https://www.gkindex.com/python-tutorial/images/C-Execution.jpg?ezimgfmt=rs:689x135/rscb1/ng:webp/ngcb1
+
+Python Program Execution And Comments
+Ways of Python Program Execution
+There are three ways of executing a Python program
+
+Using Python's command line window
+Using Python's IDLE graphics window
+Directly from System prompt
+The first two are called interactive modes where we can type the program one line at a time and the PVM executes it immediately. The last one is called non-interactive mode where we ask the PVM to execute our program after typing the entire program
+
+
+
+Comments in Python
+There are two types of comments in Python
+
+Single line comments
+Multi line comments
+Single line comments
+These comments start with a hash symbol (#) and are useful to mention that the entire line till the end should be treated as comment
+
+For example
+
+#To find sum of two numbers 
+a = 10 #store 10 into variable a 
+
+Here, the first line is starting with a #and hence the entire line is treated as a comment. In the second line, a = 10 is a statement. After this statement, #symbol starts the comment describing that the value 10 is stored into variable 'a'. The part of this line starting from #symbol to the end is treated as a comment.
+
+Comments are non-executable statements. It means neither the Python compiler nor the PVM will execute them. Comments are for the purpose of understanding human beings and not for the compiler or PVM. Hence, they are called non-executable statements
+
+Multi line comments
+When we want to mark several lines as comment, then writing #symbol in the beginning of every line will be a tedious job.
+
+For example
+
+#This is a program to find net salary of an employee 
+#based on the basic salary, provident fund, house rent allowance, 
+#dearness allowance and income tax. 
+Instead of starting every line with #symbol, we can write the previous block of code inside """ (triple double quotes) or ''' (triple single quotes) in the beginning and ending of the block as:
+
+Sponsored Content
+Helping industries become globally competitive
+Helping industries become globally competitive
+Mitsubishi Electric
+Improve Poor Sight! Do This immediately!
+Improve Poor Sight! Do This immediately!
+healthyeyes.live
+Hyderabad - Stair Lifts Could Be a Dream Come True for Seniors
+Hyderabad - Stair Lifts Could Be a Dream Come True for Seniors
+Stair Lift | Search Ads
+""" This is a program to find net salary of an employee based 
+on the basic salary, provident fund, house rent allowance, 
+dearness allowance and income tax. """ 
+Or
+
+''' This is a program to find net salary of an employee based 
+on the basic salary, provident fund, house rent allowance, 
+dearness allowance and income tax. '''
+The triple double quotes (""") or triple single quotes (''') are called 'multi line comments' or 'block comments'. 
+They are used to enclose a block of lines as comments.
+
+

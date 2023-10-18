@@ -1,0 +1,24 @@
+What is __main__ in python
+
+__main__ is a special name in Python that is used to refer to the main module or program that is being executed. 
+It is the name of the scope in which the top-level code executes, including statements that are not part of any function or class definition. 
+When a Python script is run directly, it is considered the main module, and its __name__ attribute is set to '__main__'.
+
+For example, consider a simple Python script named example.py:
+
+def my_function():
+    print('Hello, world!')
+
+if __name__ == '__main__':
+    my_function()
+
+In this script, the my_function function is defined, 
+and then there is an if statement that checks whether the __name__ attribute of the module is equal to '__main__'. 
+If it is, the my_function function is called.
+
+When you run this script using the command python example.py, 
+the __name__ attribute of the module is set to '__main__', and the my_function function is called.
+
+Using __name__ == '__main__' in this way allows you to write code that can be both imported as a module and run as a standalone program. 
+By checking the value of __name__, you can ensure that certain parts of the code are only executed when the module is run as a standalone program, 
+and not when it is imported as a module.

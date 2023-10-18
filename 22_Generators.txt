@@ -1,0 +1,37 @@
+generators in python
+
+In Python, a generator is a special type of iterator that allows you to iterate over a sequence of values without having 
+to create the entire sequence in memory at once. Instead of returning a list or other data structure that holds all the values, 
+a generator yields values one at a time as they are requested.
+
+A generator function is defined using the yield keyword instead of return. When the function is called, 
+it returns a generator object, which can be used to iterate over the sequence of values produced by the generator.
+
+Here is an example of a generator that produces an infinite sequence of Fibonacci numbers:
+
+python
+
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+In this example, the fibonacci function defines an infinite loop that generates Fibonacci numbers by repeatedly 
+yielding the current value of a and then updating a and b to the next pair of Fibonacci numbers.
+
+To use the fibonacci generator, you can create an iterator by calling the function and then use a for loop or 
+other iterator methods to retrieve the values:
+
+python
+
+fib = fibonacci()
+for i in range(10):
+    print(next(fib))
+
+This will output the first 10 Fibonacci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34.
+
+Generators are useful in many situations where you need to iterate over a large or infinite sequence of values, 
+such as reading from a large file or processing a stream of data. They are also used in many Python libraries and frameworks, 
+such as the itertools module and the Flask web framework.
+

@@ -1,0 +1,33 @@
+Decorators in python
+
+In Python, a decorator is a special kind of function that can modify the behavior of another function or class without changing its source code. 
+A decorator is defined with the "@" symbol followed by the name of the decorator function. When a decorated function or class is called, 
+the decorator is executed first and can add or modify functionality before or after the original function or class is called.
+
+Here is an example of a decorator that adds a timer to a function:
+
+python
+
+import time
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"{func.__name__} took {end_time - start_time} seconds to run.")
+        return result
+    return wrapper
+
+@timer
+def some_function():
+    # do some time-consuming operation
+    time.sleep(2)
+
+In this example, the timer decorator function takes a function as an argument and returns a new function that wraps the original function in a timer. 
+The wrapper function measures the time it takes to run the original function, prints the result, and returns the original result.
+
+The @timer decorator is applied to the some_function function, which will now automatically run with a timer whenever it is called.
+
+Decorators are a powerful tool in Python for modifying the behavior of functions and classes, and they are commonly used in web frameworks, 
+testing libraries, and other applications where dynamic behavior is required.

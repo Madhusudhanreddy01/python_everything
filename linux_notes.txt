@@ -1,0 +1,357 @@
+linux file system:
+-------------------
+
+linux file system is a collection of structured file system on disk drive or partition.
+ partition is nothing but a memory segments contains specific data.every partition contains a file system.
+ 
+ what the importance of file system:
+ ===================================
+ generally computer stores the data in Hard disks and or other storage type. 
+ primarily computer saves the data in RAM it may lost the data if it gets turned of so there is a non volatile RAM(Flash RAM and SSD)
+ is available to maintain the data after the power interruption.
+ Hard disks is preferering to storage data because RAM cost is more than Hard disk.
+ 
+The Linux file system contains the following sections:
+======================================================
+
+The root directory (/)
+A specific data storage format (EXT3, EXT4, BTRFS, XFS and so on)
+A partition or logical volume having a particular file system.
+
+
+What is the Linux File System?
+===============================
+Linux file system is generally a built-in layer of a Linux operating system
+used to handle the data management of the storage. It helps to arrange the file on the disk storage. 
+It manages the file name, file size, creation date, and much more information about a file.
+
+Linux File System Features
+In Linux, the file system creates a tree structure. All the files are arranged as a tree and its branches. 
+The topmost directory called the root (/) directory. All other directories in Linux can be accessed from the root directory.
+
+Some key features of Linux:
+===========================
+
+Specifying paths:
+-------------------
+ Linux does not use the backslash (\) to separate the components;
+ it uses forward slash (/) as an alternative. For example, as in Windows, the data may be stored in C:\ My Documents\ Work,
+ whereas, in Linux, it would be stored in /home/ My Document/ Work.
+Partition, Directories, and Drives: 
+------------------------------------
+Linux does not use drive letters to organize the drive as Windows does. 
+In Linux, we cannot tell whether we are addressing a partition, a network device, or an "ordinary" directory and a Drive.
+Case Sensitivity:
+-----------------
+ Linux file system is case sensitive. It distinguishes between lowercase and uppercase file names.
+ Such as, there is a difference between test.txt and Test.txt in Linux. This rule is also applied for directories and Linux commands.
+File Extensions:
+----------------
+ In Linux, a file may have the extension '.txt,' but it is not necessary that a file should have a file extension.
+ While working with Shell, it creates some problems for the beginners to differentiate between files and directories. 
+ If we use the graphical file manager, it symbolizes the files and folders.
+Hidden files:
+--------------
+ Linux distinguishes between standard files and hidden files, mostly the configuration files are hidden in Linux OS. 
+ Usually, we don't need to access or read the hidden files. The hidden files in Linux are represented by a dot (.) before the file name (e.g., .ignore).
+ To access the files, we need to change the view in the file manager or need to use a specific command in the shell.
+ 
+ Types of Linux File System:
+ ----------------------------
+When we install the Linux operating system, Linux offers many file systems such as Ext, Ext2, Ext3, Ext4, JFS, ReiserFS, XFS, btrfs, and swap.
+
+1. Ext, Ext2, Ext3 and Ext4 file system:
+----------------------------------------
+The file system Ext stands for Extended File System. It was primarily developed for MINIX OS.
+ The Ext file system is an older version, and is no longer used due to some limitations.
+
+Ext2 is the first Linux file system that allows managing two terabytes of data. 
+Ext3 is developed through Ext2; it is an upgraded version of Ext2 and contains backward compatibility. 
+The major drawback of Ext3 is that it does not support servers because this file system does not support file recovery and disk snapshot.
+
+Ext4 file system is the faster file system among all the Ext file systems. It is a very compatible option for the SSD (solid-state drive) disks, and it is the default file system in Linux distribution.
+
+
+2. JFS File System:
+-------------------
+JFS stands for Journaled File System, and it is developed by IBM for AIX Unix. 
+It is an alternative to the Ext file system. It can also be used in place of Ext4, 
+where stability is needed with few resources. It is a handy file system when CPU power is limited.
+
+3. ReiserFS File System:
+-------------------------
+ReiserFS is an alternative to the Ext3 file system. It has improved performance and advanced features. 
+In the earlier time, the ReiserFS was used as the default file system in SUSE Linux, but later it has changed some policies,
+ so SUSE returned to Ext3. This file system dynamically supports the file extension, but it has some drawbacks in performance.
+ 
+4. XFS File System:
+-------------------
+XFS file system was considered as high-speed JFS, which is developed for parallel I/O processing.
+it is high storage server (300+ Terabyte server).
+
+5. Btrfs File System:
+---------------------
+Btrfs stands for the B tree file system. It is used for fault tolerance, repair system, 
+fun administration, extensive storage configuration, and more. It is not a good suit for the production system.
+
+6. Swap File System:
+---------------------
+The swap file system is used for memory paging in Linux operating system during the system hibernation. 
+A system that never goes in hibernate state is required to have swap space equal to its RAM
+size.
+
+
+file permissions:
+=================
+1.numeric type
+2.Alphabet type
+
+Numeric type:
+--------------
+number              permission type           symbolizes
+  0                  No permission             ---
+  1                  execute                   --x
+  2                  write                     -w-
+  3                  write & execute           -wx
+  4                  read                      r--
+  5                  read & Execute            r-x
+  6                  read & write              rw-
+  7                  read write & execute      rwx
+  
+  example: full permissionsfor user,group and other  chmod 777 folder name
+  
+  
+ Alphabet type:
+ --------------
+ r = read
+ w = write
+ x = execute
+ u = user
+ g = group 
+ o = other
+ 
+ example : example: full permissionsfor user,group and other chmod u=rwx,g=rwx,o=rwx foldername
+ 
+ 
+ Grep command:
+ -------------
+ global regular expression print
+ it is used to search a string in a file
+ syntax : grep <string> filename if it is case sensitive grep <string> filename
+ 
+ searchmultiple strings in a file : egrep <"string1|string2|string3"> filename
+ 
+ count of the string in a file grep -c <string> filename
+ 
+ grep -w <string> filename it will print exact line of the string
+ 
+ grep -v <string> filename except the line where the string is the remaining will print
+ 
+ 
+ find the size of the file:
+ ==========================
+ 
+ 
+ Using the "ls" Command
+ 
+The ls commands displays a list of files on a specific directory. The following ls options are useful for obtaining information about file sizes on the system.
+
+–l – displays a list of files and directories in long format and shows the sizes in bytes.
+
+–h – scales file sizes and directory sizes into KB, MB, GB, or TB when the file or directory size is larger than 1024 bytes.
+
+–s – displays a list of the files and directories and shows the sizes in blocks.
+ 
+  
+The following example shows how to find files larger than 400 blocks in the current working directory. The –print option displays the output of the find command.
+
+$ find . -size +400 -print
+
+Monitor continious logs:
+========================
+
+$ sudo tail -f /var/log/apache2/access.log
+
+The tail -F will keep track if new log file being created and will start following the new file instead of the old file.
+
+$ sudo tail -F /var/log/apache2/access.log
+
+ if you want to watch in real time only the last two lines of the log file,
+ use the -n file combined with the -f flag, as shown in the below example.
+ 
+ $ sudo tail -n2 -f /var/log/apache2/access.log
+ 
+ 
+ CUT command :
+ =============
+ 
+ 
+ Let us consider two files having name state.txt and capital.txt contains 5 names of the Indian states and capitals respectively.
+
+$ cat state.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Without any option specified it displays error.
+
+$ cut state.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+Options and their Description with examples:
+
+1. -b(byte): To extract the specific bytes, you need to follow -b option with the list of byte numbers separated by comma. Range of bytes can also be specified using the hyphen(-). It is necessary to specify list of byte numbers otherwise it gives error. Tabs and backspaces are treated like as a character of 1 byte.
+
+List without ranges
+$ cut -b 1,2,3 state.txt
+And
+Aru
+Ass
+Bih
+Chh
+
+List with ranges
+$ cut -b 1-3,5-7 state.txt
+Andra
+Aruach
+Assm
+Bihr
+Chhtti
+It uses a special form for selecting bytes from beginning upto the end of the line:
+
+In this, 1- indicate from 1st byte to end byte of a line
+$ cut -b 1- state.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+
+In this, -3 indicate from 1st byte to 3rd byte of a line
+$ cut -b -3 state.txt
+And
+Aru
+Ass
+Bih
+Chh
+
+
+Awk command:
+==============
+
+1. Default behavior of Awk: By default Awk prints every line of data from the specified file.  
+
+$ awk '{print}' employee.txt
+  
+ajay manager account 45000
+sunil clerk account 25000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+
+2. Print the lines which match the given pattern. 
+
+$ awk '/manager/ {print}' employee.txt 
+
+Output:  
+ajay manager account 45000
+varun manager sales 50000
+
+position of the words will print
+-------------------------------
+
+$ awk '{print $1,$4}' employee.txt 
+Output:  
+
+ajay 45000
+sunil 25000
+varun 50000
+
+
+SED command:
+=============
+
+SED is a powerful text stream editor. Can do insertion, deletion, search and replace(substitution).
+SED command in unix supports regular expression which allows it perform complex pattern matching.
+
+
+Example:
+Consider the below text file as an input.
+
+$cat > sample.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+
+Replacing or substituting string :
+-------------------------------
+
+sed "s/unix/linux" sample.txt (by default it will replace the first word of each line in a file)
+
+output:
+
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+
+$sed "s/unix/linux/g" sample.txt (it will replace all words in a file)
+
+Output :
+
+linux is great os. linux is opensource. linux is free os.
+learn operating system.
+linux linux which one you choose.
+
+$sed 's/unix/linux/2' sample.txt (replace only nth occurence of a line in a file)
+
+Output:
+
+unix is great os. linux is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+
+
+####Locate command######
+
+locate -i school*not
+
+The command will search for files that contain the words school and note,
+ whether they use uppercase or lowercase letters.
+ 
+ ############find command#########
+ 
+ Use the find command to search for files within a specific directory and perform subsequent operations. 
+ 
+ Here’s the general syntax:
+find [option] [path] [expression]
+
+1. Search a file with specific name.
+
+$ find ./naresh -name sample.txt 
+It will search for sample.txt in naresh directory.
+
+2. Search a file with pattern.
+
+$ find ./naresh -name *.txt 
+It will give all files which have ‘.txt’ at the end.
+
+
+3. How to find and delete a file with confirmation.
+
+$ find ./GFG -name sample.txt -exec rm -i {} \;
+ 
+When this command is entered, a prompt will come for confirmation, if you want to delete sample.txt or not. 
+if you enter ‘Y/y’ it will delete the file.
+
+4. Search for empty files and directories.
+
+$ find ./GFG -empty
+
+This command find all empty folders and files in the entered directory or sub-directories. 
+
+5. Search for file with entered permissions.
+
+$ find ./GFG -perm 664
+
+This command find all the files in the GFG directory or sub-directory with the given permissions.

@@ -1,0 +1,27 @@
+What is __name__ in python
+
+__name__ is a built-in variable in Python that is used to determine the context in which a module is being executed. 
+It is a string that represents the name of the current module. 
+The value of __name__ is set to '__main__' if the module is being executed as the main program, 
+and it is set to the name of the module if it is being imported as a module.
+
+Here's an example to illustrate how __name__ works. Let's say you have a Python script named example.py with the following code:
+
+def my_function():
+    print("Hello, world!")
+
+if __name__ == '__main__':
+    my_function()
+
+In this example, the my_function function is defined, and then there is an if statement that checks whether `__
+
+name__is equal to'main'. If it is, the my_function` function is called.
+
+If you run the example.py script from the command line using python example.py, 
+the __name__ variable will be set to '__main__', and the my_function function will be called. 
+However, if you import the example module into another Python script using import example, 
+the __name__ variable will be set to 'example', and the my_function function will not be called.
+
+Using the __name__ variable in this way allows you to write code that can be both imported as a module and run as a standalone program. 
+By checking the value of __name__, you can ensure that certain parts of the code are only executed when the module is run as a standalone program, 
+and not when it is imported as a module.

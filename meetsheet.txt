@@ -1,0 +1,33 @@
+pip3 install multiplieddispattch
+
+@dispatch(int, int)
+def abc(a,b):
+    c=a+b
+    print(c)
+
+@dispatch(int, int, int)
+def abc(a,b,c):
+    d=a*b*c
+    print(d)
+
+abc(2,3)
+
+--------------
+abstraction:
+from abc import abstractmethod
+
+class Rectangle(ABC):
+     @abstractmethod
+     def rectangle sides():
+          pass
+class square(Rectangle):
+     def rectangle_sides():
+          print("It has 4 sides")
+
+--------
+encapsulation:
+
+
+
+
+

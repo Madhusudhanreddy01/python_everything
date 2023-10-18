@@ -1,0 +1,42 @@
+Python Byte Code:
+Byte code represents a fixed set of instructions that represents all operations like arithmetic operations, comparison operations, memory related operations etc..
+
+which run on any operating system and hardware. It means the byte instructions are system independent or platform independent. 
+The size of each byte code instruction is 1 byte and hence they are called with the name byte code.
+
+
+Byte Code Example:
+Lets consider below program for viewing its byte code
+
+							#Python program to add two numbers  
+							a = b = 10 
+							#take two variables and store 10 in to them 
+							print("Sum=", (a+b)) #display their sum 
+						
+We can type this program in a text editor like Notepad and then save it as 'first.py'. It means, the first.py file contains the source code
+
+Now, let's compile the program using Python compiler as
+
+C:\>python first.py It will display the result as: sum=20
+We do not want the output of the program. We want to see the byte code instructions that were created internally by the Python compiler before they are executed by the PVM.
+
+For this purpose, we should specify the 'dis' module while using python command as:
+
+C:\>python -m dis first.py
+
+It will produce the following output:
+
+  1           0 LOAD_CONST               0 (10)
+              2 DUP_TOP
+              4 STORE_NAME               0 (a)
+              6 STORE_NAME               1 (b)
+
+  2           8 LOAD_NAME                2 (print)
+             10 LOAD_CONST               1 ('Sum =')
+             12 LOAD_NAME                0 (a)
+             14 LOAD_NAME                1 (b)
+             16 BINARY_ADD
+             18 CALL_FUNCTION            2
+             20 POP_TOP
+             22 LOAD_CONST               2 (None)
+             24 RETURN_VALUE

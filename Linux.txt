@@ -1,0 +1,334 @@
+Linux is an open-source operating system. It is like Windows, Mac, Android, etc.
+
+
+Unix is also an operating system like Linux. It is an commercial OS. 
+It consists of three parts: Kernal, Shell and Programs. Most of the Unix and Linux commands are similar in nature.
+
+
+Linux Tutorial
+---------------------------
+
+Linux Tutorial
+What is Linux
+Linux History
+Linux Features
+Unix vs Linux
+Linux Distributions
+Linux Licensing
+Linux Directories
+
+
+
+
+Linux Directories
+--------------------------------
+Linux pwd
+Linux cd
+Linux Absolute Relative
+Linux Path Completion
+Linux ls
+Linux mkdir
+mkdir -p, -parents
+mkdir -v, -verbose
+mkdir -m -mode=MODE
+Linux rmdir
+Linux Files
+
+Linux files
+file
+touch
+rm
+cp
+mv
+rename
+Linux file
+file -s
+file *
+file /directory name/*
+file [range]*
+Linux touch
+touch -a
+touch -m
+touch -r
+touch -t
+touch -c
+Linux rm
+rm *extension
+rm -r or R
+rm -i
+rm -rf
+Linux cp
+cp -r
+cp file1 file 2 directory name
+cp -backup
+cp -i
+cp -l
+cp -p
+cp -u -v
+Linux mv
+mv -i
+mv *
+mv --suffix
+mv -u
+Linux rename
+rename -n
+rename -v
+rename (a-z)(A-Z)/ (A-Z)(a-z)
+rename -f
+Linux Man Pages
+
+Linux man
+Linux man -a
+Linux man -aw
+Linux man -f
+Linux man -k(apropos)
+Linux man whereis
+Linux File Contents
+
+Linux File Contents
+Linux head
+Linux tail
+Linux cat
+cat > [fileName]
+cat [oldfile] > [newfile]
+cat [file1 file2 and so on] > [new file name]
+cat -n/cat -b [fileName]
+cat -e [fileName]
+cat [fileName] <
+Linux tac
+Linux more
+Linux less
+Linux File Hierarchy
+
+Linux File Hierarchy
+Binary Directories
+Configuration Directories
+Data Directories
+Memory Directories
+Usr Directory
+var Directory
+Non-standard directories
+12 Linux Filters
+
+Linux Filters
+Linux cat
+Linux cut
+Linux grep
+Linux comm
+Linux sed
+Linux tee
+Linux tr
+Linux uniq
+Linux wc
+Linux od
+Linux sort
+Linux gzip
+Linux I/O Redirection
+
+Linux I/O Redirection
+Linux Input Redirection
+Linux Output Redirection
+Linux Error Redirection
+Linux Unix Tools
+
+Linux Unix Tools
+Linux Find
+Linux Locate
+Linux Date
+Linux Cal
+Linux Sleep
+Linux Time
+Linux zcat/zmore
+Linux bzip2 / bunzip2
+Linux bzcat / bzmore
+Linux df
+Linux Regex
+
+Linux RegEx
+Linux Grep RegEx
+Linux rename RegEx
+Linux Sed RegEx
+Linux Users
+
+Linux Users
+Local su Commands
+Linux User Management
+User Password
+Local Groups
+Linux File Security
+
+Linux File OwnerShip
+Linux Permission
+Linux Advance Permission
+Linux File Links
+1) Linux Inodes
+2) Linux Link Directories
+3) Linux Hard links
+4) Linux Soft links
+5) Linux Remove link
+Linux Shell Commands
+
+Linux Commands
+Linux Aliases
+Linux Arguments
+Linux Displaying Shell
+Linux Control Operators
+1) Semicolon
+2) Ampersand
+3) Dollar Question Mark
+4) Double Ampersand
+5) Double Vertical Bar
+6) Combining && and ||
+7) Pound Sign
+8) ESC
+Linux File Globbing
+Linux Shell Embedding
+Linux Shell History
+Linux History Commands
+Linux Histroy Size
+Linux Bang Bang
+Linux Networking
+
+Linux Networking
+1) Linux ifconfig
+2) Linux ip
+3) Linux traceroute
+4) Linux tracepath
+5) Linux ping
+6) Linux netstat
+7) Linux ss
+8) Linux dig
+9) Linux nslookup
+10) Linux route
+11) Linux host
+12) Linux arp
+13) Linux iwconfig
+14) Linux hostname
+15) Linux curl & wget
+16) Linux mtr
+17) Linux whois
+18) Linux ifplugstatus
+Linux vi editor
+
+Vi Editor
+Vi Commands
+1) switch
+2) move
+3) jump
+4) delete
+5) undo and repeat
+6) cut, copy, paste
+7) cut, copy, paste blocks
+8) Start and end
+9) Joining
+10) word
+11) Search
+12) Replace all
+13) Text Buffers
+14) Abbreviations
+Linux System Admin
+
+Linux Admin Commands
+Linux uptime
+Linux service
+Linux terminating
+1) Linux kill
+2) Linux killall
+3) Linux pkill
+4) Linux xkill
+Linux pmap
+-x
+-d
+-q
+-v
+Linux wget command
+wget
+wget -O
+wget --limit-rate=
+wget -c
+wget -b
+wget --tries=
+wget -i
+wget --mirror -p --convert-links -P ./local dir
+wget --reject=
+wget -Qm -i
+wget -r -A.
+wget -o
+Linux ftp or sftp
+Linux free Command
+free -t
+free -o
+free -s
+free -l
+watch free
+Linux top
+Linux last
+last -n
+last -R
+last -a
+last -F
+last
+last -x
+Linux ps
+ps -ef/ ps -aux
+ps -ax
+ps -u
+ps -C
+ps -p
+ps -ppid
+pstree
+ps -L
+ps --sort pmem
+ps -eo
+ps -U root -u root u
+Linux shutdown
+Linux info
+Linux env
+Linux du
+Linux init
+Linux Nano Editor
+Linux shred
+Linux mount
+Linux route
+100+ Linux Commands
+
+100+ Linux Commands
+bzip2 / bunzip2
+bzcat / bzmore
+cal
+cat
+cd
+comm
+cp
+cut
+date
+df
+file
+find
+grep
+gzip / gunzip
+head
+less
+locate
+ls
+man
+mkdir
+more
+mv
+od
+pwd
+rename
+rm
+rmdir
+sed
+sleep
+sort
+tac
+tail
+tee
+time
+touch
+tr
+uniq
+wc
+zcat / zmore

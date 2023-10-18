@@ -1,0 +1,21 @@
+Differences between Python and C Language
+The following are the major differences from the python to C Language
+
+C Language	                                                   Python
+C is procedure-oriented programming language.It does not contain the features like classes, objects, inheritance, polymorphism, etc.|	Python is object-oriented oriented language. It contains features like classes, objects, inheritance, polymorphism, etc.
+Pointers concept is available in C.|	Python does not use pointers.
+C has do… while, while and for loops.|	Python has while and for loops.
+C has switch statement.|	Python does not have switch statement.
+The variable in for loop does not increment automatically.|	The variable in the for loop increments automatically.
+C programs execute faster.	Python programs are slower compared to C.| PyPy flavor or Python programs run a bit faster but still slower than C.
+It is compulsory to declare the datatypes of variables, arrays etc. in C.|	Type declaration is not required in Python.
+C language type discipline is static and weak.|	Python type discipline is dynamic and strong.
+C does not have exception handling facility and hence C programs are weak.|	Python handles exceptions and hence Python programs are robust.
+The programmer should allocate and deallocate memory using malloc(), calloc(), realloc() or free() functions.|	Memory allocation and deallocation is done automatically by PVM.
+C does not contain a garbage collector.|	Automatic garbage collector is available in Python.
+C supports single and multi-dimensional arrays.|	Python supports only single dimensional arrays. To work with multi-dimensional arrays, we should use third party applications like numpy.
+The array index should be positive integer.|	Array index can be positive or negative integer number. Negative index represents locations from the end of the array.
+Checking the location outside the allocation of an array is not supported in C.|	Python performs checking outside an array for all iterations while looping.
+C supports in-line assignments.|	Python does not support in-line assignments.
+A semicolon is used to terminate the statements in C and comma is used to separate expressions.|	New line indicates end of the statements and semicolon is used as an expression separator.
+Indentation of statements is not necessary in C.|	Indentation is required to represent a block of statements.

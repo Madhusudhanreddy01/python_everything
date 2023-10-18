@@ -1,0 +1,14 @@
+Python user defined Data Types
+The data types which are created by the programmers are called 'user-defined' data types. For example, an array, a class, or a module is user-defined data types. 
+We will discuss about these data types later.
+
+
+Identifiers
+An identifier is a name that is given to a variable or function or class etc.
+Identifiers can include letters, numbers, and the underscore character (_).
+They should always start with a nonnumeric character.
+Special symbols such as ?, #, $,%, @ etc are not allowed in identifiers.
+Some examples for identifiers are salary, name11, gross_income, etc.
+We should also remember that Python is a case sensitive programming language. It means capital letters and small letters are identified separately by Python.
+
+For example, the names 'num' and 'Num' are treated as different names and hence represent different variables.

@@ -1,0 +1,19 @@
+Differences between Python and Java
+The following are the major differences of Python and Java.
+
+Java	                                                  Python
+Java|	Python
+Java is object-oriented programming language. Functional programming features are introduced into Java 8.0 through lambda expressions.|	Python blends the functional programming with object-oriented programming features. Lambdas are already available in Python.
+Java language type discipline is static and weak.|	Python type discipline is dynamic and strong.
+It is compulsory to declare the datatypes of variables, arrays etc. in Java.|	Type declaration is not required in Python.
+Java programs are verbose. It means they contain more number of lines.|	Python programs are concise and compact. A big program can be written using very less number of lines.
+In Java, the collection objects like Stack, LinkedList or Vector store only objects but not primitive datatypes like integer numbers.|	Python collection objects like lists and dictionaries can store objects of any type, including numbers and lists.
+Memory allocation and deal location is done automatically by JVM (Java Virtual Machine).|	Memory allocation and deal location is done automatically by PVM (Python Virtual Machine).
+The variable in for loop does not increment automatically. But in for each loop, it will increment automatically.|	The variable in the for loop increments automatically.
+A semicolon is used to terminate the statements and comma is used to separate expressions.|	New line indicates end of the statements and semicolon is used as an expression separator.
+Indentation of statements is not necessary in Java.|	Indentation is required to represent a block of statements.
+Java has do… while, while, for and for each loops.|	Python has while and for loops.
+Java has switch statement or block.|	Python does not have switch statement or block.
+Java supports single and multi-dimensional arrays.|	Python supports only single dimensional arrays. To work with multi-dimensional arrays, we should use third party applications like numpy.
+The array index should be a positive integer.|	Array index can be positive or negative integer number. Negative index represents locations from the end of the array.
+Checking the location outside the allocation of an array is not supported in Java.|	Python performs checking outside an array for all iterations while looping.

@@ -1,0 +1,16 @@
+What is __pycache__ in python
+
+__pycache__ is a directory that is automatically created by Python to store compiled bytecode files (.pyc) when a module is imported for the first time. 
+When a module is imported, Python compiles the module into bytecode and stores it in the __pycache__ directory for future use. 
+The bytecode is platform-specific and is used to speed up the loading of the module the next time it is imported.
+
+The __pycache__ directory is created in the same directory as the module that is being compiled. 
+For example, if you have a module named example.py in a directory called my_module, the __pycache__ directory will be created as my_module/__pycache__/.
+
+Each bytecode file is named with the pattern module_name.version.pyc, 
+where module_name is the name of the module, version is the Python version used to compile the bytecode, 
+and .pyc is the extension used for the compiled bytecode file.
+
+It's safe to delete the __pycache__ directory if you want to clear out the compiled bytecode files. 
+Python will recompile the modules the next time they are imported. 
+However, this will cause a small delay in loading the modules, as Python will have to recompile them.

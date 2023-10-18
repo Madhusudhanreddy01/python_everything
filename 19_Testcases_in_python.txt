@@ -1,0 +1,111 @@
+What is unittest in python
+
+unittest is a testing framework in Python that allows you to write and run unit tests for your Python code. 
+It is part of the Python standard library, so it is available with every Python installation.
+
+Unit testing is a software testing technique in which individual units or components of a software system 
+are tested in isolation to ensure that they function correctly. 
+In Python, a unit is typically a single function or method.
+
+unittest provides a set of tools for writing and running unit tests. 
+You can define test cases by subclassing the unittest.TestCase class and using its methods to test your code. 
+For example, you can use the assertEqual method to test that two values are equal, 
+the assertTrue method to test that a Boolean expression is true, and so on.
+
+Here is an example of a simple test case defined using unittest:
+
+css
+
+import unittest
+
+def add(a, b):
+    return a + b
+
+class TestAdd(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(0, 0), 0)
+        self.assertEqual(add(-1, 1), 0)
+
+if __name__ == '__main__':
+    unittest.main()
+
+In this example, the TestAdd class inherits from unittest.TestCase and defines a test_add method that tests the add function. 
+The if __name__ == '__main__': block at the end of the script runs the test case using the unittest.main() function.
+
+unittest provides many other tools for testing your code, including support for fixtures, test suites, and test runners. 
+By writing and running unit tests with unittest, you can ensure that your code works as expected and avoid introducing new bugs when making changes.
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how to check test cases in python
+
+To check test cases in Python, you can use a testing framework such as unittest, pytest, or doctest. 
+Here's a brief overview of how to use each of these frameworks:
+
+    unittest: This is a built-in testing framework in Python, which allows you to write test cases in a class-based structure. 
+Here's an example:
+
+python
+
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertEqual('hello'.upper(), 'HELLO')
+
+    def test_isupper(self):
+        self.assertTrue('HELLO'.isupper())
+        self.assertFalse('Hello'.isupper())
+
+if __name__ == '__main__':
+    unittest.main()
+
+In the example above, we define a test case class TestStringMethods and include two test methods, test_upper and test_isupper. 
+We use the assert method to check that the output of the tested function matches the expected result.
+
+    pytest: This is a popular testing framework in Python, which allows you to write test cases in a function-based structure. 
+Here's an example:
+
+python
+
+import pytest
+
+def test_upper():
+    assert 'hello'.upper() == 'HELLO'
+
+def test_isupper():
+    assert 'HELLO'.isupper()
+    assert not 'Hello'.isupper()
+
+In the example above, we define two test functions test_upper and test_isupper and use the assert statement 
+to check that the output of the tested function matches the expected result.
+
+    doctest: This is a built-in testing framework in Python, which allows you to write test cases within the documentation of your code. 
+Here's an example:
+
+python
+
+def square(x):
+    """
+    This function returns the square of a number.
+
+    >>> square(2)
+    4
+    >>> square(3)
+    9
+    """
+    return x**2
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+
+In the example above, we include test cases within the documentation of the square function using the >>> notation. 
+We then use the doctest module to run the tests and check that the output of the tested function matches the expected result.
+
+These are just a few examples of how to check test cases in Python. 
+You can choose the framework that best suits your needs and preferences.
+
+
