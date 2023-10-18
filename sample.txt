@@ -1,0 +1,863 @@
+l = [90, 12, 0, 7, 6, 3, 5, 700,1]
+s = l[0]
+for i in range(1,len(l)):
+    if l[i] > s:
+        s = l[i]
+print(s)
+
+
+/----------------------------------------------------
+Class:
+Class is called as the blueprint for the object. 
+If you want to create a class then you need to use class keyword then write the name of the class and finally give a colon(:).
+
+syntax:
+
+class ClassName:
+    statemen-1
+    statemen-2
+    statemen-3
+             .
+             .
+             .
+    statement-n
+
+
+A class contains class attributes, class constructor, class methods, etc.
+
+For example, Parrot is an object of class bird that can have attributes like name, age, color, etc.
+
+
+
+Object:
+Objects are the instantiation of classes and also the way to use classes.
+
+These are those entities that have attributes and behaviors which are defined inside the class.
+
+In real-word, object examples are desktop, mobile, ac, freeze, etc.
+
+When we create a class, then we only describe the blueprint for objects but memory is allocated when we create objects of classes.
+
+syntax:
+
+class ClassName:
+    pass
+obj = ClassName()
+
+Here, ClassName is the name of the class, and obj is the object of the class.
+
+class Employee:
+    # class attribute
+    company = "copyassignment.com"
+    # constructor
+    def __init__(self, name, age, salary):
+        # instance attributes
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+# creating objects
+emp1 = Employee("John", 34, 50000)
+emp2 = Employee("Harry", 30, 60000)
+
+# accessing class attributes using __class__ method
+# syntax is-- instance.__class__.attribute
+print(f"{emp1.name} and {emp2.name} work for {emp1.__class__.company}")
+
+# accessing instance attributes
+# syntax is-- instance.instance_attribute
+print(f"{emp1.name}'s age is {emp1.age} and salary is {emp1.salary}")
+print(f"{emp2.name}'s age is {emp2.age} and salary is {emp2.salary}")
+
+
+Output:
+John and Harry work for copyassignment.com
+John's age is 34 and salary is 50000
+Harry's age is 30 and salary is 60000
+
+Explanation
+Class Attribute
+We create a class with name “Employee“. Variables that we create in a class are called class attributes and here, the company is a class attribute.
+
+Constructor
+Then, we have created the constructor. A constructor is a special method in a class that the python always calls when we create or instantiate an object. Python uses “__init__()” to create a constructor.
+
+The self parameter
+The __init__() method can take parameters but the first parameter should always be the “self” parameter which refers to the current instance of the class.
+
+You can use any name instead of self but it should be the first parameter always.
+
+Instance Attribute
+Variables that we create inside a constructor are called instance attributes. These attributes are different for different instances. Like here name, age, and salary are different for both emp1 and emp2 instances.
+
+Methods
+Methods are the functions that are defined inside the body of a class and associated with an object. They are used to define the behaviors of an object.
+
+Example:
+class Employee:
+    # class attribute
+    company = "copyassignment.com"
+    # constructor
+    def __init__(self, name, age, salary):
+        # instance attributes
+        self.name = name
+        self.age = age
+        self.salary = salary
+    # class method
+    def myMethod1(self):
+        print(f"Hi {self.name}!")
+    def myMethod2(self, city):
+        print(f"{self.name}, do you lives in {city}?")
+
+# creating objects
+emp1 = Employee("John", 34, 50000)
+emp2 = Employee("Harry", 30, 60000)
+
+# calling methods
+emp1.myMethod1()
+emp1.myMethod2("London")
+Output:
+Hi John!
+John, do you lives in London?
+Here, we have created two methods mymethod1 and mymethod2, we can use self parameter with them.
+
+
+
+
+
+
+
+
+sorted() function
+The sorted() function can accept three parameters: the iterable, the key, and reverse.
+
+sorted(iterable, key, reverse)
+
+In contrast to the sort() method which only works on lists, the sorted() function can work on any iterable, such as lists, tuples, dictionaries, and others. 
+However, unlike the sort() method which returns None and modifies the original list, 
+the sorted() function returns a new list while leaving the original object unchanged.
+
+Note: No matter what iterable is passed in to the sorted() function, it always returns a list.
+
+Sorting a Dictionary
+Dictionaries are made up of key: value pairs. Thus, they can be sorted by the keys or by the values.
+
+Let’s say that we have a dictionary, with the keys being names, and the values being ages.
+
+dictionary_of_names = {'beth': 37, 
+                       'jane': 32,
+                       'john': 41, 
+                       'mike': 59
+}
+If we just pass in the entire dictionary as the iterable to the sorted() function, we will get the following output:
+
+print(sorted(dictionary_of_names))
+# ['beth', 'jane', 'john', 'mike']
+As we can see, if we pass in the entire dictionary as the iterable to the sorted() function, 
+it returns a list that contains only the keys sorted alphabetically.
+
+
+OrderedDict is a sub class of dictionary which remembers the order of entries added in dictionary object. 
+When iterating over an ordered dictionary, the items are returned in the order their keys were first added.
+
+>>> from collections import OrderedDict
+>>> D = {5:'fff', 3:'ttt', 1:'ooo',4:'bbb', 2:'ddd'}
+>>> OrderedDict(D.items())
+ OrderedDict([(5, 'fff'), (3, 'ttt'), (1, 'ooo'), (4, 'bbb'), (2, 'ddd')])
+
+We also need to us sorted() function that sorts elements in an iterable in a specified order. 
+The function takes a function as argument which is used as key for sorting. Since we intend to sort dictionary on values, 
+we take 1st element of tuple as key for sorting.
+
+>>> OrderedDict(sorted(D.items(), key=lambda t: t[1]))
+   OrderedDict([(4, 'bbb'), (2, 'ddd'), (5, 'fff'), (1, 'ooo'), (3, 'ttt')])
+The OrderedDict object can be parsed into a regular dictionary object
+
+>>> D1 = dict(OrderedDict(sorted(D.items(), key = lambda t: t[1])))
+>>> D1
+   {4: 'bbb', 2: 'ddd', 5: 'fff', 1: 'ooo', 3: 'ttt'}
+
+
+
+
+/-------------------
+
+import datetime
+
+# Take user input for the number of rows
+rows = int(input("Enter the number of rows: "))
+
+
+# Set the delay time to 2 hours using the datetime.timedelta object
+delay = datetime.timedelta(minutes=1)
+
+# Run the loop continuously
+while True:
+    # Record the current time before printing the pattern
+    start_time = datetime.datetime.now()
+    
+    # Print the pattern with decreasing number of stars in each row
+    for i in range(rows, 0, -1):
+        for j in range(0, i):
+            print("* ", end="")
+        print()
+
+    # Record the current time after printing the pattern
+    end_time = datetime.datetime.now()
+
+    # Calculate the time elapsed by subtracting the start time from the end time
+    time_elapsed = end_time - start_time
+
+    # Use a busy-wait loop to delay the program until the desired delay time has passed
+    while time_elapsed < delay:
+        # Record the current time to update the time elapsed
+        end_time = datetime.datetime.now()
+        time_elapsed = end_time - start_time
+
+
+/-----------------
+
+Talking about the system, it contains various functions which include Account Statement, Withdrawing, Depositing amount and changing the pin. 
+Here, at first the user has to enter an existing username, when the username matches the system proceed toward the next procedure i.e asking pin number. 
+When a user passes all these sign-in procedures, he/she can use all those features. It is too easy to use, he/she can check their respective account statements.
+
+While depositing or withdrawing amount, he/she just has to enter the amount then the system calculates the total remaining balance of the respective account and displays to the user. And the user can view all these transactions from the account statement. In this ATM Simulator, the user can also change the pin number. For this, the user has to enter the New pin code and then confirm it in order to change the pin code. This simple console based ATM simulator provides the simple account balance management of a respective account. It contains all the essential features. There is no database connection or neither any external text or other files used in this mini project to save user’s data. 
+Everything is set inside the source code whether its pin code or the amount.
+
+/------------------
+
+
+# mul=lambda x, y : x * y
+# print(mul(10,20))
+
+
+# a=[1,2,3]
+# a.extend([4,5,6])
+# print(a)
+
+# 9. Write a function swap_element that contains two args which will be the position 
+# of elements present in the list. The function must swap the elements present in those 
+# positions. Input: [1,2,3,4,5,6,7,8] function: swap_element(arg1, arg2)
+
+# def function(arg1, arg2):
+#     if (arg1<=len(input_)-1) and (arg2<=len(input_)-1):
+#         if (arg1>=0 and arg2 >=0):
+#             input_[arg1],input_[arg2]=input_[arg2],input_[arg1]
+#             print(input_)
+#         else:
+#             print("Didn't swap index low")
+#     else:
+#         print("Didn't swap index high")
+        
+        
+        
+# input_=[1,2,3,4,5,6,7,8]
+# po_1=int(input())
+# po_2=int(input())
+# print(input_)
+# function(po_1, po_2)
+
+
+# class madhu:
+#     def hi(self):
+#         print("madhu")
+#         yield 10
+# def bye():
+#     ("sudhan")
+#     yield 20
+    
+# 19. Write a program using decorators to print the traffic signal messages 
+# Expected output - 
+# RED : STOP 
+# YELLOW : SLOW DOWN 
+# GREEN : GO 
+# The decorator should be working in this order
+
+
+def traffic_signals(func):
+    def inner():
+        func()
+    return inner
+    
+@traffic_signals
+def red():
+    print("RED : STOP ")
+def yellow():
+    print("YELLOW : SLOW DOWN")
+def green():
+    print("GREEN : GO")
+red()
+yellow()
+green()
+
+
+
+number = int(input("enter the number: "))
+rev_num=0
+for digit in range(len(str(number))):
+    rev_num = rev_num * 10 + number % 10
+    number //= 10
+print(f"After reversed number is {rev_num}")
+
+t = ("Msys", "Technologies", "2007")
+t1 = ("Python",)
+print(t+t1)
+
+
+t2 = ("Msys", "Technologies", "2007")
+t3 = ["Python"]
+t4 = list(t2)
+t4.extend(t3)
+print(t4)
+
+s =("Msys", "Technologies", "2007")
+s1 = list(s)
+s1.append('python')
+print(s1)
+
+
+
+
+d ={'Msys Technologies':'Sanjay Sehgal', 'Infosys':'Salil Parekh','TCS':'Rajesh Gopinathan', 'Wipro':'Thierry Delaporte'}
+print(d)
+print("----------------")
+k = sorted(d.items(), key=lambda x : x[1] )
+print(dict(k))
+print("----------------")
+k = sorted(d.items())
+print(dict (k))
+
+
+# 4. In the dictionary {‘India’:’New Delhi’, ‘USA’:’Washington D.C.’, ‘Nepal’:’Kathmandu’} list out  all the keys 
+#    in a list named as ‘list_keys’ and list out all the values in a list named as ‘list_values’.  
+# Also find out the value of key ‘Australia’ in the list and as it is not existing in the list print ‘NA’ as  its value.
+
+
+# Define the dictionary
+my_dict = {'India': 'New Delhi', 'USA': 'Washington D.C.', 'Nepal': 'Kathmandu'}
+
+# Get all the keys in a list
+list_keys = list(my_dict.keys())
+print("Keys: ", list_keys)
+
+# Get all the values in a list
+list_values = list(my_dict.values())
+print("Values: ", list_values)
+
+# Get the value of key 'Australia' in the dictionary
+value = my_dict.get('Australia', 'NA')
+print("Value of 'Australia': ", value)
+
+
+# Define the list of words
+my_list = ['Nissan', 'maruti', 'hyundai', 'Volkswagen', 'audi']
+
+# Extract the words starting with lowercase letter
+lowercase_words = [word for word in my_list if word[0].islower()]
+
+# Print the extracted words
+print(lowercase_words)
+
+
+# Create a dictionary comprehension
+my_dict = {i: i**2 for i in range(1, 11)}
+
+# Print the dictionary
+print(my_dict)
+
+marks = int(input("Enter the marks obtained by the student (out of 100): "))
+
+# Check if the marks are valid
+if marks < 0 or marks > 100:
+    print("Invalid marks!")
+else:
+    # Assign grade based on marks obtained
+    if marks >= 91:
+        grade = "A1"
+    elif marks >= 81:
+        grade = "A2"
+    elif marks >= 71:
+        grade = "B1"
+    elif marks >= 61:
+        grade = "B2"
+    elif marks >= 51:
+        grade = "C1"
+    elif marks >= 40:
+        grade = "C2"
+    else:
+        grade = "Fail"
+        
+    print(f"The grade obtained by the student is {grade}")
+
+
+
+# Define the list
+my_list = [1, 2, 1, 5, 9, 10, 2, 2, 7, 5, 3, 10, 8, 9, 15, 17, 21, 16, 17, 90]
+
+# Find the difference between the length of the list and the count of unique elements
+result = len(my_list) - len(set(my_list))
+
+# Print the result
+print(f"The difference between the length of the list and the count of unique elements is {result}")
+
+
+
+input1=input("Enter:")
+n = len(input1)
+output=''
+count=1
+
+for i in range(n):
+    if input1[i].isalpha() and input1[i] == input1[i + 1]:
+        count += 1
+
+    elif input1[i].isalpha() and input1[i] != input1[i + 1]:
+        output+=input1[i]+str(count)
+        count = 1
+
+    elif input1[i].isdigit:
+        output+=input1[i]
+print(output)
+
+
+/-----------------------------------------
+
+from threading import Timer
+
+
+
+def stars(count):
+    
+    for i in range(11,0,-2):
+        print(" "*(11-i)+"* "*i)
+        count += 1
+        if count < 5:
+            Timer(5,stars(count)).start()
+        
+count = 0   
+stars(count)
+
+
+-----------------------------
+
+
+i=10
+j=20 
+if(i>j):
+    x=lambda i:i**2
+    print("i is greater : "+str(x(i)))
+else:
+    y=lambda j:j**2
+    print("j is greater : "+str(y(j)))
+
+
+list_1 = ["Msys", "Tata", "Wells", "Mobinius"]
+list_2 = ["Technologies", "Power", "Fargo", "Technologies"]
+  
+lamda=lambda i,j:i+" "+j
+
+print(list(map(lamda,list_1,list_2)))
+
+
+word="Hello World".split(" ")
+
+def fun(arg):
+   result=""
+   for i in arg:
+       result=result+(i[::-1])+" "
+   return result
+print(fun(word))
+
+-------------------------
+
+
+word="hello"
+str_=""
+vowel_catch=""
+for i in (word):
+    if(i in ["a","e","i","o","u"]):
+        str_+="_"
+        vowel_catch+=i
+    else:
+        str_=str_+i
+rev_vowel_orde=(list(reversed(sorted(vowel_catch))))
+count=-1
+result=""
+for i in str_:
+    if(i=="_"):
+        count=count+1
+        result+=(rev_vowel_orde[count])
+
+    else:
+       result+=i
+# print(rev_vowel_orde)
+print(result)
+
+----------------
+
+def number_of_prime_numbers(num1, num2):
+    primes = []
+    for num in range(num1, num2+1):
+        if num > 1:
+            for i in range(2, int(num**(1/2))+1):
+                if (num % i) == 0:
+                    break
+            else:
+                primes.append(num)
+    return len(primes), sum(primes)
+print(number_of_prime_numbers(1,100))
+
+
+------
+list_1 = [10, 12, 15, 67, 95, 45, 43, 89, 91, 80, 75, 78, 94, 100]
+
+result_list = list(filter(lambda x: x % 2 == 0 or x % 5 == 0, list_1))
+
+print(result_list)
+
+--------------
+
+
+import os
+
+def move_onedir_to_another(source,destination):
+    files = os.listdir(source)
+    #print(files)
+
+
+    for i in files:
+        source_path = os.path.join(source,i)
+        destination_path=os.path.join(destination,i)
+        os.rename(source_path, destination_path)
+
+    return destination_path
+
+if __name__ == '__main__':
+    source="D:\Python\os_path\old"
+    destination="D:\Python\os_path\demo"
+    print(move_onedir_to_another(source,destination))
+
+------------------
+
+string ='abcdaa hssbbye' 
+str_=""
+for i in range(len(string)-1):
+    if(string[i]!=string[i+1]):
+      str_=str_+string[i]
+    if(string[i]==string[i-1]):
+        str_=str_+"_"
+ 
+print(str_)
+
+----------
+
+String_="MsYs TecHNOlogiEs iS a gREat place To woRk"
+lower_count=0 
+upper_count=0
+
+for i in String_:
+    if(i.islower()):
+        lower_count+=1
+    if(i.isupper()):
+        upper_count+=1
+print(lower_count,upper_count)
+
+-------------
+def remove_char(string, char):
+    if char not in string:
+        raise ValueError("Given character is not present in the string. Please try with a new one.")
+    return string.replace(char, '')
+string = input("Enter a string: ")
+char = input("Enter a character to remove: ")
+try:
+    new_string = remove_char(string, char)
+    print("New string:", new_string)
+except ValueError as e:
+    print(e)
+------------
+def extract_digits(input_str):
+    digits = [char for char in input_str if char.isdigit()]
+    digits = sorted(set(digits))
+    return ''.join(digits)
+
+def extract_special_characters(input_str):
+    special_chars = [char for char in input_str if not char.isalnum()]
+    return ''.join(special_chars)
+
+def extract_vowels(input_str):
+    vowels = [char for char in input_str if char.lower() in 'aeiou']
+    vowels = vowels[::-1]
+    return ''.join(vowels)
+input_str = "abcd123bye09@8"
+digits = extract_digits(input_str)
+special_chars = extract_special_characters(input_str)
+vowels = extract_vowels(input_str)
+
+print("Digits:", digits)
+print("Special characters:", special_chars)
+print("Vowels:", vowels)
+--------------------------------
+
+
+dict1 = {"name": "Msys", "Place": "Pune"} 
+dict2 = {"EmpID": 1, "Salary": 50000} 
+
+#way1
+dict1.update(dict2)
+print(dict1)
+print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+#way2
+merge_dict=({**dict1,**dict2})
+print(merge_dict)
+print("-------------------------------------------------")
+
+#update the salary
+present_salary=merge_dict["Salary"]
+updates_salary = (present_salary + (present_salary * 0.1))
+print(updates_salary)
+print("-------------------------------------------------")
+
+#add age:
+merge_dict["age"]=35
+print(merge_dict)
+print("-------------------------------------------------")
+
+#values,keys
+print(tuple(merge_dict.keys()))
+print(tuple(merge_dict.values()))
+print("-------------------------------------------------")
+
+#delete age:
+del merge_dict["age"]
+print(merge_dict)
+
+--------------------
+
+def is_palindrome(word):
+    """
+    Helper function to check if a given word is a palindrome or not.
+    """
+    return word == word[::-1]
+
+def count_palindrome_words(text):
+    """
+    Function to count the palindrome words in a given text and return them as a dictionary.
+    """
+    # Split the text into words
+    words = text.split()
+
+    # Initialize an empty dictionary to store the palindrome words and their counts
+    palindrome_words = {}
+
+    # Loop through each word and check if it is a palindrome
+    for word in words:
+        if is_palindrome(word):
+            # If the word is a palindrome, add it to the dictionary and update its count
+            if word in palindrome_words:
+                palindrome_words[word] += 1
+            else:
+                palindrome_words[word] = 1
+
+    return palindrome_words
+
+# Example usage
+text = "Nittin & his mom went to a park last friday. His Mom observed that the weather was too cool. Nittin also met his sis. If we reverse the number 1331 then we also get 1331."
+palindrome_words = count_palindrome_words(text.lower())
+print(palindrome_words) # Output: {'nittin': 2, 'mom': 2, 'sis': 1, '1331': 2}
+
+------------------------------
+
+string = "Hello, welcome to this organisation."
+width = 4
+
+# Reverse the string and remove blank spaces
+string = string[::-1].replace(" ", "")
+# print(string)
+
+# Wrap the string into paragraphs of width and reverse each line
+paragraphs = [line[::1] for line in [string[i:i+width] for i in range(0, len(string), width)][::-1]]
+
+# Print the paragraphs
+for line in paragraphs:
+    print(line)
+
+----------------------
+
+def traffic_signal(func):
+    def wrapper(signal):
+        if signal == 'RED':
+            print('RED : STOP')
+        elif signal == 'YELLOW':
+            print('YELLOW : SLOW DOWN')
+        elif signal == 'GREEN':
+            print('GREEN : GO')
+        else:
+            print('Invalid signal')
+        func(signal)
+    return wrapper
+
+
+@traffic_signal
+def message(signal):
+    pass
+
+
+message('RED')
+message('YELLOW')
+message('GREEN')
+message('Black')
+-----------------------
+
+print("Implementing a Context Manager as a Class:")
+class File(object):
+    def __init__(self, file_name, method):
+        self.file_obj = open(file_name, method)
+    def __enter__(self):
+        return self.file_obj
+    def __exit__(self, type, value, traceback):
+        # print("exception has been handled")
+        self.file_obj.close()
+        # return True
+
+with File('context_class.txt', 'w') as opened_file:
+    # opened_file.undefined_function('Madhusudhan')
+    opened_file.write('Madhusudhan')
+----------------
+word="hello"
+str_=""
+vowel_catch=""
+for i in (word):
+    if(i in ["a","e","i","o","u"]):
+        str_+="_"
+        vowel_catch+=i
+    else:
+        str_=str_+i
+rev_vowel_orde=(list(reversed(sorted(vowel_catch))))
+count=-1
+result=""
+for i in str_:
+    if(i=="_"):
+        count=count+1
+        result+=(rev_vowel_orde[count])
+
+    else:
+       result+=i
+# print(rev_vowel_orde)
+print(result)
+
+-----------
+
+print("Implementing a Context Manager as a Class:")
+class File(object):
+    def __init__(self, file_name, method):
+        self.file_obj = open(file_name, method)
+    def __enter__(self):
+        return self.file_obj
+    def __exit__(self, type, value, traceback):
+        # print("exception has been handled")
+        self.file_obj.close()
+        # return True
+
+with File('context_class.txt', 'w') as opened_file:
+    # opened_file.undefined_function('Madhusudhan')
+    opened_file.write('Madhusudhan')
+---------
+
+input_=[1,2,3,4,5,6,7,8] 
+def function(arg1,arg2):
+    if(arg1<=len(input_)-1 and arg2<=len(input_)-1)  :
+        #  0<7   or   4<7
+         if(arg1>=0 and arg2>=0):
+               input_[arg1],input_[arg2]=input_[arg2],input_[arg1]
+               print(input_)
+         else:
+            print("didnt swap because one of the index position is  low")
+    else:
+        print("didnt swap because one of the index position is high" )
+        
+function(1,7)
+
+--------
+x = 42
+s = repr(x)
+print(type(s))
+
+--------------
+
+def combinatin_word(String,word):  
+    count=0
+    for i in range(len(String)):
+        new_word=String[i:i+len(word)]
+        t=0
+        for j in range(len(new_word)):
+            if word[j] in new_word:
+                t+=1
+            if t==len(word):
+                print(new_word)
+                count+=1
+    return count
+        
+string="abcbaefabcabcdhijkl"
+word="abc"
+print(combinatin_word(string,word))
+
+------
+
+def sub_string(str1,str2):
+    for i in str1:
+        print(i)
+        if i in str2:
+            print(i)
+            return "YES"
+        return "NO"    
+
+str1 = "Madhu is doing task."
+str2= "madhu is doing work."
+print(sub_string(str1,str2))
+
+-----
+def record_calls(func):
+    def wrapper(*args, **kwargs):
+        wrapper.call_count += 1
+        return func(*args, **kwargs)
+    wrapper.call_count = 0
+    return wrapper
+
+@record_calls
+def my_function():
+    print("Hello World!")
+
+my_function()
+my_function()
+print(my_function.call_count)
+----
+def interleave(a,b):  
+    result=[]                     
+    if len(a) < len(b):            
+        for i in range (len(a)):   
+            result.append(a[i])
+            result.append(b[i])
+    else:                          
+        for i in range (len(b)):
+            result.append(a[i])
+            result.append(b[i])            
+        
+        return result
+a = [1, 2, 3, 4, 5]
+b = ['a', 'b', 'c','d']
+result = interleave(a, b)
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
